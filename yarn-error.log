@@ -1,0 +1,61 @@
+Arguments: 
+  /Users/jaewoo/.nvm/versions/node/v12.18.3/bin/node /Users/jaewoo/.nvm/versions/node/v12.18.3/bin/yarn
+
+PATH: 
+  /Users/jaewoo/.nvm/versions/node/v12.18.3/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/jaewoo/data/project/modules/check-validation/node_modules/.bin:/Users/jaewoo/.composer/vendor/bin:/Users/jaewoo/Library/Android/sdk/tools:/Users/jaewoo/Library/Android/sdk/tools/bin:/Users/jaewoo/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.18.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/jaewoo/data/project/modules/check-validation/package.json: Unexpected token ] in JSON at position 740
+      at JSON.parse (<anonymous>)
+      at /Users/jaewoo/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/jaewoo/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/jaewoo/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "check-validation",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "nodemon example/index.ts --watch  ./ --exec ts-node",
+      "build": "tsc"
+    },
+    "main": "dist/index.js",
+    "type": "dist/index.d.ts",
+    "author": "jaewoo <sigka1234@gmail.com>",
+    "repository": "git@github.com:sigka1234/get-value-from-object.git",
+    "bugs": {
+      "url": "https://github.com/sigka1234/get-value-from-object"
+    },
+    "homepage": "https://github.com/sigka1234/get-value-from-object",
+    "license": "MIT",
+    "devDependencies": {
+      "typescript": "^4.1.2"
+    },
+    "keywords": [
+      "node",
+      "react",
+      "react-native",
+      "validation",
+      "validator",
+      "validate",
+      "node validation",
+      "check validation",
+      "check-validation",
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
