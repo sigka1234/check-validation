@@ -62,7 +62,7 @@ const data = {
 ```JavaScript
  let rules = {
      name : "required", // rules for name
-     email: "require|email", // rules for email
+     email: "required|email", // rules for email
      age : "number|min[20]|max[30]", // rules for age
      hobby: "required|minLength[2]", // rules for hobby
      password: "required|match[passwordConfirm]", // rules for password

@@ -1,6 +1,6 @@
 {
   "name": "check-validation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "start": "nodemon example/index.ts --watch  ./ --exec ts-node",
     "build": "tsc"
@@ -25,7 +25,14 @@
     "validator",
     "validate",
     "node validation",
+    "react validation",
+    "react-native validation",
     "check validation",
-    "check-validation"
+    "check validate",
+    "check validator",
+    "check-validation",
+    "validation check",
+    "validate check",
+    "validator check"
   ]
 }
