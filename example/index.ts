@@ -14,7 +14,8 @@ const data = {
 //     name : "required", // rules for name
 //     email: "require|email", // rules for email
 //     age : "number|min[20]|max[30]", // rules for age
-//     hobby: "required|minLength[2]" // rules for hobby
+//     hobby: "required|minLength[2]", // rules for hobby
+//     password : "required|match[passwordConfirm]"
 // }
 
 
@@ -45,6 +46,11 @@ let rules = {
         rules: "required|minLength[2]", // rules for hobby
         title: "my hobby",
         minLength: "minLength error message of hobby"
+    },
+    password : {
+        rules : "required|match[passwordConfirm]", // rules for password
+        title : "pass word",
+        match : "match error message of password"
     }
 }
 

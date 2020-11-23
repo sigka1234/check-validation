@@ -8,11 +8,11 @@
   "main": "dist/index.js",
   "type": "dist/index.d.ts",
   "author": "jaewoo <sigka1234@gmail.com>",
-  "repository": "git@github.com:sigka1234/get-value-from-object.git",
+  "repository": "git@github.com:sigka1234/check-validation.git",
   "bugs": {
-    "url": "https://github.com/sigka1234/get-value-from-object"
+    "url": "https://github.com/sigka1234/check-validation"
   },
-  "homepage": "https://github.com/sigka1234/get-value-from-object",
+  "homepage": "https://github.com/sigka1234/check-validation",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^4.1.2"
@@ -26,6 +26,6 @@
     "validate",
     "node validation",
     "check validation",
-    "check-validation",
+    "check-validation"
   ]
 }
