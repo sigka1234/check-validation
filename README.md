@@ -32,8 +32,6 @@ yarn add check-validation
 ```JavaScript
 import validation from "check-validation" 
 
-import { default, validate } from "check-validation" 
-
 var validation = require("check-validation")
 ```
 <br>
