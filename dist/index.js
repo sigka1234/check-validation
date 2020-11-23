@@ -62,8 +62,8 @@ var setMessage = function (key, value, ruleValue, locale, korean, compare) {
         || ruleValue === "length"
         || ruleValue === "minLength"
         || ruleValue === "maxLength") {
-        var name = value && value.title ? value.title : key;
-        return value[ruleValue] ? value[ruleValue] : (locale === "ko" ? messages(forKorean_1.default(name, korean), compare, locale)[ruleValue] : messages(name, compare, locale)[ruleValue]);
+        var name_1 = value && value.title ? value.title : key;
+        return value[ruleValue] ? value[ruleValue] : (locale === "ko" ? messages(forKorean_1.default(name_1, korean), compare, locale)[ruleValue] : messages(name_1, compare, locale)[ruleValue]);
     }
     else {
         return "Unknown Error";
