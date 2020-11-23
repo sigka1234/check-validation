@@ -150,7 +150,7 @@ let rules = {
         title : "이름" // 오류 예) 이름을 입력 바랍니다 
     },
     email: {
-        rules: "require|email", // rules for email
+        rules: "required|email", // rules for email
         title: "나의 이메일", // 오류 예) 나의 이메일이 형식에 맞지 않습니다
     }
 } 

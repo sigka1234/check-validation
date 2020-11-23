@@ -12,7 +12,7 @@ const data = {
 //
 // let rules = {
 //     name : "required", // rules for name
-//     email: "require|email", // rules for email
+//     email: "required|email", // rules for email
 //     age : "number|min[20]|max[30]", // rules for age
 //     hobby: "required|minLength[2]", // rules for hobby
 //     password : "required|match[passwordConfirm]"
@@ -32,7 +32,7 @@ let rules = {
         required: "required error message of name"
     },
     email: {
-        rules: "require|email", // rules for email
+        rules: "required|email", // rules for email
         title: "email2", // change the key name "email" to "email2" for error message
         email: "email form error message of email" // it does not care title value
     },
@@ -55,7 +55,7 @@ let rules = {
 }
 
 const check = validation(data, rules) // {result : true or false , message: error message }
-
+console.log(check)
 if (check.result) {
     //success
 } else {
