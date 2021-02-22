@@ -30,7 +30,7 @@ const messages = (name: string, compare: string = "", locale = "en") => {
         maxLength: `${name} must be less than ${compare} lengths`,
     }
 
-    const kr = {
+    const ko = {
         required: `${name} 입력 바랍니다`,
         email: `${name} 형식에 맞지 않습니다`,
         number: `${name} 숫자가 아닙니다`,
@@ -46,7 +46,7 @@ const messages = (name: string, compare: string = "", locale = "en") => {
         maxLength: `${name} 글자수는 ${compare}자리 미만이어야 합니다`,
     }
 
-    return locale === "kr" ? kr : en
+    return locale === "ko" ? ko : en
 }
 
 const setMessage = (key: string, value: any, ruleValue: string, locale: string = "en", korean: string, compare : string = "") => {
