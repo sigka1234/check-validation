@@ -29,7 +29,7 @@ var messages = function (name, compare, locale) {
         minLength: name + " must be more than " + compare + " lengths",
         maxLength: name + " must be less than " + compare + " lengths",
     };
-    var kr = {
+    var ko = {
         required: name + " \uC785\uB825 \uBC14\uB78D\uB2C8\uB2E4",
         email: name + " \uD615\uC2DD\uC5D0 \uB9DE\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4",
         number: name + " \uC22B\uC790\uAC00 \uC544\uB2D9\uB2C8\uB2E4",
@@ -44,7 +44,7 @@ var messages = function (name, compare, locale) {
         minLength: name + " \uAE00\uC790\uC218\uB294 " + compare + "\uC790\uB9AC \uCD08\uACFC\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4",
         maxLength: name + " \uAE00\uC790\uC218\uB294 " + compare + "\uC790\uB9AC \uBBF8\uB9CC\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4",
     };
-    return locale === "kr" ? kr : en;
+    return locale === "ko" ? ko : en;
 };
 var setMessage = function (key, value, ruleValue, locale, korean, compare) {
     if (locale === void 0) { locale = "en"; }
@@ -75,7 +75,7 @@ var basicExecute = function (data, key, value, title, ruleValue, locale) {
     var message = "";
     switch (ruleValue) {
         case "required":
-            message = setMessage(key, value, ruleValue, locale, "이");
+            message = setMessage(key, value, ruleValue, locale, "을");
             result = _required(data, message);
             break;
         case "email":
@@ -87,7 +87,7 @@ var basicExecute = function (data, key, value, title, ruleValue, locale) {
             result = _regExp(data, regExps.number, message);
             break;
         case "phone":
-            message = setMessage(key, value, ruleValue, locale, "을");
+            message = setMessage(key, value, ruleValue, locale, "이");
             result = _regExp(data, regExps.phone, message);
             break;
         case "korean":

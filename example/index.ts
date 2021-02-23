@@ -55,10 +55,9 @@ let rules = {
 }
 
 const check = validation(data, rules) // {result : true or false , message: error message }
-console.log(check)
 if (check.result) {
     //success
 } else {
     //fail
     //console.log(check.message)
-}
+ }

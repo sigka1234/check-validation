@@ -49,7 +49,7 @@ const messages = (name: string, compare: string = "", locale = "en") => {
     return locale === "ko" ? ko : en
 }
 
-const setMessage = (key: string, value: any, ruleValue: string, locale: string = "en", korean: string, compare : string = "") => {
+const setMessage = (key: string, value: any, ruleValue: string, locale: string = "en", korean: string, compare: string = "") => {
     if (ruleValue === "required"
         || ruleValue === "email"
         || ruleValue === "number"
@@ -65,7 +65,7 @@ const setMessage = (key: string, value: any, ruleValue: string, locale: string =
         || ruleValue === "maxLength"
     ) {
         const name = value && value.title ? value.title : key
-        return value[ruleValue] ? value[ruleValue] : (locale === "ko" ? messages(forKorean(name, korean), compare ,locale)[ruleValue] : messages(name, compare ,locale)[ruleValue])
+        return value[ruleValue] ? value[ruleValue] : (locale === "ko" ? messages(forKorean(name, korean), compare, locale)[ruleValue] : messages(name, compare, locale)[ruleValue])
     } else {
         return "Unknown Error"
     }
@@ -76,7 +76,7 @@ const basicExecute = (data: any, key: string, value: any, title: string, ruleVal
     let message = ""
     switch (ruleValue) {
         case "required" :
-            message = setMessage(key, value, ruleValue, locale, "이")
+            message = setMessage(key, value, ruleValue, locale, "을")
             result = _required(data, message)
             break
         case "email" :
@@ -88,7 +88,7 @@ const basicExecute = (data: any, key: string, value: any, title: string, ruleVal
             result = _regExp(data, regExps.number, message)
             break
         case "phone" :
-            message = setMessage(key, value, ruleValue, locale, "을")
+            message = setMessage(key, value, ruleValue, locale, "이")
             result = _regExp(data, regExps.phone, message)
             break
         case "korean" :
@@ -200,15 +200,15 @@ const _regExp = (data: any, regExp: any, message: string) => data ? _returnData(
 
 const _match = (data: any, matchData: any, message: string) => data ? _returnData(data.toString() === matchData.toString(), message) : _success
 
-const _min = (data: any, min: any, message: string) => data ?  _returnData(Number(data) >= Number(min), message) : _success
+const _min = (data: any, min: any, message: string) => data ? _returnData(Number(data) >= Number(min), message) : _success
 
-const _max = (data: any, max: any, message: string) => data ?  _returnData(Number(data) <= Number(max), message) : _success
+const _max = (data: any, max: any, message: string) => data ? _returnData(Number(data) <= Number(max), message) : _success
 
-const _minLength = (data: any, min: any, message: string) => data ?  _returnData(data.length >= Number(min), message) : _success
+const _minLength = (data: any, min: any, message: string) => data ? _returnData(data.length >= Number(min), message) : _success
 
-const _maxLength = (data: any, max: any, message: string) => data ?  _returnData(data.length <= Number(max), message) : _success
+const _maxLength = (data: any, max: any, message: string) => data ? _returnData(data.length <= Number(max), message) : _success
 
-const _length = (data: any, max: any, message: string) => data ?  _returnData(data.length === Number(max), message) : _success
+const _length = (data: any, max: any, message: string) => data ? _returnData(data.length === Number(max), message) : _success
 
 const _checkDepth = (state: any, str: string = ''): any => {
     if (str.indexOf('.') >= 0) {
